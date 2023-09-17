@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jareste- <jareste-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 06:27:22 by jareste-          #+#    #+#             */
-/*   Updated: 2023/09/17 12:18:37 by jareste-         ###   ########.fr       */
+/*   Updated: 2023/09/15 23:47:43 by jareste-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef WrongAnimal_HPP
+# define WrongAnimal_HPP
 
 # include <iostream>
-# include "Brain.hpp"
 
-class Animal
+class WrongAnimal
 {
 	protected:
 		std::string	type;
 	public:
-		Animal();
-		Animal( const Animal &src );
-		virtual ~Animal();
-		Animal	&operator=( const Animal& animal );
-		virtual void	makeSound() const;
-		virtual std::string	getType() const;
+		WrongAnimal();
+		WrongAnimal( const WrongAnimal &src );
+		virtual ~WrongAnimal();
+		WrongAnimal	&operator=( const WrongAnimal& WrongAnimal );
+		void	makeSound() const;
+		std::string	getType() const;
 };
+
+std::ostream&	operator<<( std::ostream& out, const WrongAnimal* wrongAnimal );
+std::ostream&	operator<<( std::ostream& out, const WrongAnimal& wrongAnimal );
 
 #endif
