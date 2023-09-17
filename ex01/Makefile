@@ -6,15 +6,15 @@
 #    By: jareste- <jareste-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/15 06:17:41 by jareste-          #+#    #+#              #
-#    Updated: 2023/09/16 23:03:26 by jareste-         ###   ########.fr        #
+#    Updated: 2023/09/17 03:58:59 by jareste-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Polymorphism
 
-SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
+SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 
-HEADER = Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp
+HEADER = Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp Brain.hpp
 
 CC = c++
 RM = rm -f
