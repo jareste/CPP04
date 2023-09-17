@@ -6,7 +6,7 @@
 /*   By: jareste- <jareste-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 06:51:49 by jareste-          #+#    #+#             */
-/*   Updated: 2023/09/17 03:46:11 by jareste-         ###   ########.fr       */
+/*   Updated: 2023/09/17 12:06:02 by jareste-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,83 +19,37 @@
 
 int main(void)
 {
-	// const Animal* animal = new Animal();
-	// const Animal* dog = new Dog();
-	// const Animal* cat = new Cat();
+	const Dog *k = new Dog();
+	std::cout << std::endl;
+	const Dog l;
+	std::cout << std::endl;
+	l.setIdeas("lllll");
+	std::cout << std::endl;
+	const Dog *i = new Dog(l);
+	std::cout << std::endl;
 
-	const Cat *i = new Cat();
-	const Cat *k = i; 
-	// delete k;
 	k->makeSound();
 	k->setIdeas("hola");
+	k->setIdeas("hola1");
+	k->setIdeas("hola2");
+	k->setIdeas("hola3");
+	k->setIdeas("hola4");
+	k->setIdeas("hola5");
+	k->setIdeas("hola6");
+	k->setIdeas("hola7");
+	k->setIdeas("hola8");
+	k->setIdeas("hola9");
+	std::cout << std::endl << "k ideas: " << std::endl;
+	k->printIdeas();
+	
+	std::cout << std::endl << "l ideas: " << std::endl;
+	l.printIdeas();
+
+	std::cout << std::endl << "i ideas: " << std::endl;
+	i->printIdeas();
+	std::cout << std::endl;
 	delete i;
-	// std::cout << std::endl << std::endl;
-
-	// std::cout << "Animal-> " << animal->getType() << " " << std::endl;
-	// std::cout << "Dog-> " << dog->getType() << " " << std::endl;
-	// std::cout << "Cat-> " << cat->getType() << " " << std::endl;
-
-	// std::cout << std::endl << std::endl;
-
-	// std::cout << "AnimalSound-> ";
-	// animal->makeSound();
-	// std::cout << std::endl;
-	// std::cout << "DogSound-> ";
-	// dog->makeSound();
-	// std::cout << std::endl;
-	// std::cout << "CatSound-> ";
-	// cat->makeSound();
-	// std::cout << std::endl;
-
-	// std::cout << std::endl << std::endl;
-	
-	
-	// std::cout << "AnimalDestructor-> ";
-	// delete animal;
-	// std::cout << std::endl;
-	// std::cout << "DogDestructor-> ";
-	// delete dog;
-	// std::cout << std::endl;
-	// std::cout << "CatDestructor-> ";
-	// delete cat;
-	// std::cout << std::endl;
-	
-	
-	// std::cout << std::endl << std::endl;
-
-	// const WrongAnimal* wrongAnimal = new WrongAnimal();
-	// const WrongAnimal* wrongAnimalCat = new WrongCat();
-	// const WrongCat* wrongCat = new WrongCat();
-
-	// std::cout << std::endl << std::endl;
-	
-	// std::cout << "wrongAnimal -> " << wrongAnimal->getType() << " " << std::endl;
-	// std::cout << "wrongAnimalCat -> " << wrongAnimalCat->getType() << " " << std::endl;
-	// std::cout << "wrongCat -> " << wrongCat->getType() << " " << std::endl;
-
-	// std::cout << std::endl << std::endl;
-
-	// std::cout << "wrongAnimal -> ";
-	// wrongAnimal->makeSound();
-	// std::cout << "wrongAnimalCat -> ";
-	// wrongAnimalCat->makeSound();
-	// std::cout << "wrongCat -> ";
-	// wrongCat->makeSound();
-
-	// std::cout << std::endl << std::endl;
-
-	// delete wrongAnimal;
-	// delete wrongAnimalCat;
-	// delete wrongCat;
-	// /////////////////////////////
-
-
-
-
-
-
-
-
+	delete k;
 
 	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: jareste- <jareste-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 06:27:51 by jareste-          #+#    #+#             */
-/*   Updated: 2023/09/17 03:48:25 by jareste-         ###   ########.fr       */
+/*   Updated: 2023/09/17 12:03:56 by jareste-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 Cat::Cat()
 {
+	std::cout << "Cat default constructor called" << std::endl;
 	this->type = "Cat";
 	this->brain = new Brain;
-	std::cout << "Cat default constructor called" << std::endl;
 }
 
 Cat::Cat( const Cat &src )
 {
-	*this = src;
-	this->brain = new Brain;
 	std::cout << "Cat copy constructor called" << std::endl;
+	this->brain = new Brain;
+	*this = src;
 }
 
 Cat::~Cat()
@@ -32,12 +32,13 @@ Cat::~Cat()
 	delete this->brain;
 }
 
-Cat	&Cat::operator=( const Cat& Cat )
+Cat	&Cat::operator=( const Cat& cat )
 {
-	(void) Cat;
+	std::cout << "Cat operator called" << std::endl;
 	this->type = type;
-	// this->brain = new Brain;
-	std::cout << "here" << std::endl;
+	if (this->brain)
+		delete this->brain;
+	this->brain = new Brain(*cat.brain);
 	return (*this);
 }
 
@@ -51,7 +52,13 @@ std::string	Cat::getType() const
 	return (this->type);
 }
 
-void Cat::setIdeas(std::string ideas) const
+void Cat::setIdeas(std::string const &ideas) const
 {
 	brain->setIdeas(ideas);
 }
+
+void	Cat::printIdeas() const
+{
+	brain->printIdeas();
+}
+

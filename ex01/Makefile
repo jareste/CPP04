@@ -6,7 +6,7 @@
 #    By: jareste- <jareste-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/15 06:17:41 by jareste-          #+#    #+#              #
-#    Updated: 2023/09/17 03:58:59 by jareste-         ###   ########.fr        #
+#    Updated: 2023/09/17 12:02:24 by jareste-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ HEADER = Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp Brain.hpp
 
 CC = c++
 RM = rm -f
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -g -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -std=c++98 #-g -fsanitize=address
 
 %.o: %.cpp Makefile ${HEADER}
 		@${CC} ${CFLAGS} -c $< -o $@

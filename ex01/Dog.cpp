@@ -6,7 +6,7 @@
 /*   By: jareste- <jareste-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 06:27:32 by jareste-          #+#    #+#             */
-/*   Updated: 2023/09/17 03:48:22 by jareste-         ###   ########.fr       */
+/*   Updated: 2023/09/17 12:03:39 by jareste-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ Dog::Dog()
 
 Dog::Dog( const Dog &src )
 {
-	*this = src;
-	this->brain = new Brain;
 	std::cout << "Dog copy constructor called" << std::endl;
+	this->brain = new Brain;
+	*this = src;
 }
 
 Dog::~Dog()
@@ -32,11 +32,13 @@ Dog::~Dog()
 	delete this->brain;
 }
 
-Dog	&Dog::operator=( const Dog& Dog )
+Dog	&Dog::operator=( const Dog& dog )
 {
-	(void) Dog;
+	std::cout << "Dog operator called" << std::endl;
 	this->type = type;
-	// this->brain = brain;
+	if (this->brain)
+		delete this->brain;
+	this->brain = new Brain(*dog.brain);
 	return (*this);
 }
 
@@ -50,7 +52,12 @@ std::string	Dog::getType() const
 	return (this->type);
 }
 
-void Dog::setIdeas(std::string ideas) const
+void	Dog::setIdeas(std::string const &ideas) const
 {
 	brain->setIdeas(ideas);
+}
+
+void	Dog::printIdeas() const
+{
+	brain->printIdeas();
 }

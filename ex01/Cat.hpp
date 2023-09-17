@@ -6,7 +6,7 @@
 /*   By: jareste- <jareste-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 06:27:46 by jareste-          #+#    #+#             */
-/*   Updated: 2023/09/17 03:47:56 by jareste-         ###   ########.fr       */
+/*   Updated: 2023/09/17 11:39:02 by jareste-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,9 @@ class	Cat : public Animal
 		Cat	&operator=( const Cat& Cat );
 		void	makeSound() const;
 		std::string	getType() const;
-		void setIdeas(std::string ideas) const;
+		void setIdeas(std::string const &ideas) const;
+		void	printIdeas() const;
+		// void setIdeas(std::string ideas) const;
 };
 
 #endif
