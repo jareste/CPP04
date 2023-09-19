@@ -6,7 +6,7 @@
 #    By: jareste- <jareste-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/17 22:04:14 by jareste-          #+#    #+#              #
-#    Updated: 2023/09/19 02:37:09 by jareste-         ###   ########.fr        #
+#    Updated: 2023/09/19 05:09:51 by jareste-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ HEADER = AMateria.hpp Ice.hpp Character.hpp ICharacter.hpp
 
 CC = c++
 RM = rm -f
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -g -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -std=c++98 #-g -fsanitize=address
 
 %.o: %.cpp Makefile ${HEADER}
 		@${CC} ${CFLAGS} -c $< -o $@
