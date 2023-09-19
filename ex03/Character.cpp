@@ -6,7 +6,7 @@
 /*   By: jareste- <jareste-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 01:44:00 by jareste-          #+#    #+#             */
-/*   Updated: 2023/09/20 01:36:59 by jareste-         ###   ########.fr       */
+/*   Updated: 2023/09/20 01:47:42 by jareste-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,13 +48,7 @@ Character::Character( const Character &src )
 		if (src.inventory[i] == NULL)
 			this->inventory[i] = NULL;
 		else
-		{
-			std::cout << "PREVaddressINV::::::::::::::::::::::::::::::::::::::::;" << &this->inventory[i] << std::endl;
-			std::cout << "PREVaddressSRC::::::::::::::::::::::::::::::::::::::::;" << &src.inventory[i] << std::endl;
-			// delete this->inventory[i];
 			this->inventory[i] = src.inventory[i]->clone();
-			std::cout << "AFTERaddress::::::::::::::::::::::::::::::::::::::::;" << &this->inventory[i] << std::endl;
-		}
 	}
 	this->floorCapacity = src.getFloorCapacity();
 	this->floorIdx = src.getFloorIdx();
@@ -184,7 +178,6 @@ void Character::printMaterias() const
 	{
 		if (inventory[i] != NULL)
 		{
-			// std::cout << "address:::::::::::::::::::::::::::" << &inventory[i] << std::endl;
 			materia = inventory[i]->getType();
 			name = this->getName();
 			std::cout << name << " materia " << i << " is " << materia << std::endl;
