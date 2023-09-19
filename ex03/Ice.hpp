@@ -6,7 +6,7 @@
 /*   By: jareste- <jareste-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 01:43:24 by jareste-          #+#    #+#             */
-/*   Updated: 2023/09/19 01:21:21 by jareste-         ###   ########.fr       */
+/*   Updated: 2023/09/19 05:29:34 by jareste-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 
 class Ice : public AMateria
 {
-	private:
-
 	public:
 		Ice();
 		Ice( const Ice &src );

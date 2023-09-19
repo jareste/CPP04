@@ -6,21 +6,21 @@
 /*   By: jareste- <jareste-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 06:11:13 by jareste-          #+#    #+#             */
-/*   Updated: 2023/09/19 04:05:58 by jareste-         ###   ########.fr       */
+/*   Updated: 2023/09/19 06:38:11 by jareste-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHARACTER_HPP
 # define CHARACTER_HPP
 
-#include "ICharacter.hpp"
+# include "ICharacter.hpp"
+
 
 class Character : public ICharacter
 {
 	private:
 		std::string	name;
 		AMateria	*inventory[4];
-		// int			index;
 	public:
 		Character();
 		Character(std::string name);

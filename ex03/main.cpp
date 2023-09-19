@@ -6,7 +6,7 @@
 /*   By: jareste- <jareste-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 03:14:32 by jareste-          #+#    #+#             */
-/*   Updated: 2023/09/19 05:12:36 by jareste-         ###   ########.fr       */
+/*   Updated: 2023/09/19 06:42:56 by jareste-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int main()
 	ch->equip(cure);
 	ch->unequip(0);
 	ch->equip(k);
-	ch->equip(l);
+	ch->equip(l );
 	ch->use(1, *bob);
 	ch->use(3, *bob);
 	delete ch;

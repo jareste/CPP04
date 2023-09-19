@@ -6,7 +6,7 @@
 /*   By: jareste- <jareste-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 01:43:44 by jareste-          #+#    #+#             */
-/*   Updated: 2023/09/19 02:36:56 by jareste-         ###   ########.fr       */
+/*   Updated: 2023/09/19 05:29:31 by jareste-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 
 class Cure : public AMateria
 {
-	private:
-
 	public:
 		Cure();
 		Cure( const Cure &src );

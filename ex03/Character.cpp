@@ -6,7 +6,7 @@
 /*   By: jareste- <jareste-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 01:44:00 by jareste-          #+#    #+#             */
-/*   Updated: 2023/09/19 05:03:25 by jareste-         ###   ########.fr       */
+/*   Updated: 2023/09/19 06:40:54 by jareste-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,10 @@ Character::~Character()
 	std::cout << "Character default destructor called" << std::endl;
 	for (int i = 0; i < 4; i++)
 		if (inventory[i] != NULL)
+		{
 			delete inventory[i];
+			inventory[i] = NULL;
+		}
 }
 
 Character	&Character::operator=( const Character& character )
@@ -122,6 +125,9 @@ void Character::unequip(int idx)
 
 void Character::use(int idx, ICharacter& target)
 {
+	if (idx < 0 || idx > 3)
+		return ;
 	if (this->inventory[idx] != NULL)
 		this->inventory[idx]->use(target);
 }
+
