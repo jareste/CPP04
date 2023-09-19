@@ -6,7 +6,7 @@
 /*   By: jareste- <jareste-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 01:43:18 by jareste-          #+#    #+#             */
-/*   Updated: 2023/09/19 02:32:01 by jareste-         ###   ########.fr       */
+/*   Updated: 2023/09/20 01:26:30 by jareste-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ Ice	&Ice::operator=( const Ice& ice )
 AMateria* Ice::clone() const
 {
 	std::cout << "Ice clone called" << std::endl;
-	return (new Ice(*this));
+	AMateria *ice = new Ice(*this);
+	return (ice);
 }
 
 void Ice::use(ICharacter& target) const

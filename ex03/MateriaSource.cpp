@@ -6,7 +6,7 @@
 /*   By: jareste- <jareste-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 01:44:43 by jareste-          #+#    #+#             */
-/*   Updated: 2023/09/19 05:03:58 by jareste-         ###   ########.fr       */
+/*   Updated: 2023/09/20 01:33:41 by jareste-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,28 +27,35 @@ MateriaSource::MateriaSource( const MateriaSource &src )
 		if (src.materias[i] == NULL)
 			this->materias[i] = NULL;
 		else
+		{
+			// delete this->materias[i];
 			this->materias[i] = src.materias[i]->clone();
+		}
 	}}
 
 MateriaSource::~MateriaSource()
 {
 	for (int i = 0; i < 4; i++)
 		if (this->materias[i] != NULL)
+		{
 			delete this->materias[i];
+			this->materias[i] = NULL;
+		}
 }
 
 MateriaSource	&MateriaSource::operator=( const MateriaSource& materiasource )
 {
 	std::cout << "MateriaSource operator called" << std::endl;
-	for (int i = 0; i < 4; i++)
+	if (this != &materiasource)
 	{
-		if ( this->materias[i] != NULL )
-			delete this->materias[i];
-		this->materias[i] = NULL;
-		if (materiasource.materias[i] == NULL)
+		for (int i = 0; i < 4; i++)
+		{
+			if ( this->materias[i] != NULL )
+				delete this->materias[i];
 			this->materias[i] = NULL;
-		else
-			this->materias[i] = materiasource.materias[i]->clone();
+			if (materiasource.materias[i] != NULL)
+				this->materias[i] = materiasource.materias[i]->clone();
+		}
 	}
 	return (*this);
 }
@@ -68,10 +75,28 @@ AMateria* MateriaSource::createMateria(std::string const & type)
 {
 	for (int i = 0; i < 4; i++)
 	{
-		std::string _type = this->materias[i]->getType();
-		if (_type == type)
-			return (materias[i]->clone());
+		if (this->materias[i] != NULL)
+		{
+			std::string _type = this->materias[i]->getType();
+			if (this->materias[i]->getType().compare(type) == 0)
+				return (this->materias[i]->clone());
+		}
 	}
 	return (0);
+}
+
+void MateriaSource::printMaterias() const
+{
+	std::string materia;
+	// std::string	name;
+	for (int i = 0; i < 4; i++)
+	{
+		if (materias[i] != NULL)
+		{
+			materia = materias[i]->getType();
+			// name = this->getName();
+			std::cout << "MateriaSource " << " materia " << i << " is " << materia << std::endl;
+		}
+	}
 }
 

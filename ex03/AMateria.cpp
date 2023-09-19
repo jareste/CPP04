@@ -6,11 +6,16 @@
 /*   By: jareste- <jareste-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 01:42:28 by jareste-          #+#    #+#             */
-/*   Updated: 2023/09/18 06:04:05 by jareste-         ###   ########.fr       */
+/*   Updated: 2023/09/20 01:21:12 by jareste-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
+
+AMateria::AMateria()
+{
+}
+
 
 AMateria::AMateria(std::string const & type)
 {
@@ -19,6 +24,13 @@ AMateria::AMateria(std::string const & type)
 
 AMateria::~AMateria()
 {
+}
+
+AMateria&	AMateria::operator=( const AMateria& materia )
+{
+	std::cout << "AMateria: Assignation operator called" << std::endl;
+	this->type = materia.type;
+	return ( *this );
 }
 
 std::string const & AMateria::getType() const
