@@ -6,7 +6,7 @@
 /*   By: jareste- <jareste-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 01:42:33 by jareste-          #+#    #+#             */
-/*   Updated: 2023/09/18 06:03:55 by jareste-         ###   ########.fr       */
+/*   Updated: 2023/09/19 01:31:31 by jareste-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <iostream>
 # include "ICharacter.hpp"
+
+class ICharacter;
 
 class AMateria
 {

@@ -6,7 +6,7 @@
 /*   By: jareste- <jareste-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 01:43:18 by jareste-          #+#    #+#             */
-/*   Updated: 2023/09/18 06:07:40 by jareste-         ###   ########.fr       */
+/*   Updated: 2023/09/19 02:32:01 by jareste-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,8 @@ AMateria* Ice::clone() const
 
 void Ice::use(ICharacter& target) const
 {
-	// (void) target; //sobra
 	std::string _target;
-	_target = target.getName(target);
+
+	_target = target.getName();
 	std::cout << "Ice: \"* shoots an ice bolt at " << _target << " *\"" << std::endl;
 }

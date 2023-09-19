@@ -6,15 +6,15 @@
 #    By: jareste- <jareste-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/17 22:04:14 by jareste-          #+#    #+#              #
-#    Updated: 2023/09/18 04:40:19 by jareste-         ###   ########.fr        #
+#    Updated: 2023/09/19 02:37:09 by jareste-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Polymorphism
 
-SRCS = main.cpp AMateria.cpp Ice.cpp
+SRCS = main.cpp AMateria.cpp Ice.cpp Character.cpp Cure.cpp MateriaSource.cpp
 
-HEADER = AMateria.hpp Ice.hpp
+HEADER = AMateria.hpp Ice.hpp Character.hpp ICharacter.hpp
 
 CC = c++
 RM = rm -f
