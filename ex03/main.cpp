@@ -6,7 +6,7 @@
 /*   By: jareste- <jareste-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 03:14:32 by jareste-          #+#    #+#             */
-/*   Updated: 2023/09/20 01:54:38 by jareste-         ###   ########.fr       */
+/*   Updated: 2023/09/20 14:20:49 by jareste-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -215,7 +215,7 @@ int main( void )
 		
 		tmp = src->createMateria("ice");
 		test->equip(tmp);
-		// test->unequip(0);
+		test->unequip(0);
 
 	std::cout << std::endl;
 
